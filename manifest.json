@@ -1,10 +1,11 @@
 {
-  "name": "The Cookie Eater",
-  "description": "Auto-dismiss cookie banners and declutter your browsing. The Cookie Eater handles cookie popups so you don't have to.",
-  "version": "1.0.0",
-  "manifest_version": 3,
-  "action": {
-    "default_popup": "popup/popup.html",
-    "default_icon": "images/hello_extensions.png"
-  }
+	"name": "The Cookie Eater",
+	"description": "Auto-dismiss cookie banners and declutter your browsing. The Cookie Eater handles cookie popups so you don't have to.",
+	"version": "1.0.0",
+	"manifest_version": 3,
+	"action": {
+		"default_popup": "popup/popup.html",
+		"default_icon": "images/hello_extensions.png"
+	},
+	"permissions": ["storage", "tabs", "activeTab"]
 }
