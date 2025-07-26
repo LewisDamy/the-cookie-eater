@@ -1,0 +1,269 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 320px;
+	min-height: 400px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: #333;
+}
+
+.container {
+	background: white;
+	border-radius: 12px;
+	margin: 8px;
+	padding: 20px;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.header {
+	margin-bottom: 24px;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 12px;
+}
+
+.cookie-icon {
+	font-size: 24px;
+}
+
+.logo h1 {
+	font-size: 20px;
+	font-weight: 600;
+	color: #2d3748;
+}
+
+.current-domain {
+	background: #f7fafc;
+	padding: 8px 12px;
+	border-radius: 8px;
+	border-left: 4px solid #667eea;
+}
+
+.domain-label {
+	font-size: 12px;
+	color: #718096;
+	display: block;
+	margin-bottom: 2px;
+}
+
+.domain-name {
+	font-size: 14px;
+	font-weight: 500;
+	color: #2d3748;
+	word-break: break-all;
+}
+
+/* Section Styles */
+.section {
+	margin-bottom: 24px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e2e8f0;
+}
+
+.section:last-of-type {
+	border-bottom: none;
+	margin-bottom: 16px;
+}
+
+.section h2 {
+	font-size: 16px;
+	font-weight: 600;
+	color: #2d3748;
+	margin-bottom: 16px;
+}
+
+/* Radio Button Styles */
+.radio-group {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.radio-option {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	cursor: pointer;
+	padding: 12px;
+	border-radius: 8px;
+	transition: all 0.2s ease;
+	border: 2px solid transparent;
+}
+
+.radio-option:hover {
+	background: #f7fafc;
+	border-color: #e2e8f0;
+}
+
+.radio-option input[type="radio"] {
+	display: none;
+}
+
+.radio-custom {
+	width: 20px;
+	height: 20px;
+	border: 2px solid #cbd5e0;
+	border-radius: 50%;
+	position: relative;
+	flex-shrink: 0;
+	margin-top: 2px;
+	transition: all 0.2s ease;
+}
+
+.radio-option input[type="radio"]:checked + .radio-custom {
+	border-color: #667eea;
+	background: #667eea;
+}
+
+.radio-option input[type="radio"]:checked + .radio-custom::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 8px;
+	height: 8px;
+	background: white;
+	border-radius: 50%;
+}
+
+/* Checkbox Styles */
+.checkbox-option {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	cursor: pointer;
+	padding: 12px;
+	border-radius: 8px;
+	transition: all 0.2s ease;
+	border: 2px solid transparent;
+}
+
+.checkbox-option:hover {
+	background: #f7fafc;
+	border-color: #e2e8f0;
+}
+
+.checkbox-option input[type="checkbox"] {
+	display: none;
+}
+
+.checkbox-custom {
+	width: 20px;
+	height: 20px;
+	border: 2px solid #cbd5e0;
+	border-radius: 4px;
+	position: relative;
+	flex-shrink: 0;
+	margin-top: 2px;
+	transition: all 0.2s ease;
+}
+
+.checkbox-option input[type="checkbox"]:checked + .checkbox-custom {
+	border-color: #667eea;
+	background: #667eea;
+}
+
+.checkbox-option input[type="checkbox"]:checked + .checkbox-custom::after {
+	content: "✓";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+/* Option Content */
+.option-content {
+	flex: 1;
+}
+
+.option-title {
+	display: block;
+	font-size: 14px;
+	font-weight: 500;
+	color: #2d3748;
+	margin-bottom: 2px;
+}
+
+.option-description {
+	display: block;
+	font-size: 12px;
+	color: #718096;
+	line-height: 1.4;
+}
+
+/* Super Private Section */
+.super-private {
+	background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+	padding: 16px;
+	border-radius: 8px;
+	border: none;
+}
+
+.super-private h2 {
+	color: #2d3748;
+	margin-bottom: 12px;
+}
+
+.super-private .checkbox-option {
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 6px;
+	margin: 0;
+}
+
+.super-private .checkbox-option:hover {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+/* Status Indicator */
+.status {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 12px;
+	background: #f0fff4;
+	border-radius: 6px;
+	border: 1px solid #9ae6b4;
+}
+
+.status-indicator {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #48bb78;
+}
+
+.status-indicator.active {
+	animation: pulse 2s infinite;
+}
+
+.status-text {
+	font-size: 12px;
+	color: #2f855a;
+	font-weight: 500;
+}
+
+@keyframes pulse {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
