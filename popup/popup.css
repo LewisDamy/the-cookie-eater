@@ -8,16 +8,17 @@ body {
 	width: 320px;
 	min-height: 400px;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-	color: #333;
+	background: #303943;
+	color: #f5f5f5;
 }
 
 .container {
-	background: white;
+	background: #f5f5f5;
 	border-radius: 12px;
 	margin: 8px;
 	padding: 20px;
-	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+	color: #303943;
 }
 
 /* Header Styles */
@@ -38,77 +39,75 @@ body {
 
 .logo-image {
 	width: 150px;
-	height:auto
+	height: auto;
 	object-fit: contain;
 }
 
 .logo h1 {
 	font-size: 20px;
 	font-weight: 600;
-	color: #2d3748;
+	color: #303943;
 }
 
 .current-domain {
-	background: #f7fafc;
+	background: #303943;
 	padding: 8px 12px;
 	border-radius: 8px;
-	border-left: 4px solid #667eea;
+	font-size: 12px;
+	color: #f5f5f5;
 }
 
 .domain-label {
-	font-size: 12px;
-	color: #718096;
-	display: block;
-	margin-bottom: 2px;
+	color: #ababac;
+	margin-right: 4px;
 }
 
 .domain-name {
-	font-size: 14px;
 	font-weight: 500;
-	color: #2d3748;
-	word-break: break-all;
+	color: #f5f5f5;
 }
 
 /* Section Styles */
 .section {
-	margin-bottom: 24px;
-	padding-bottom: 20px;
-	border-bottom: 1px solid #e2e8f0;
+	margin-bottom: 20px;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #ababac;
 }
 
-.section:last-of-type {
+.section:last-child {
 	border-bottom: none;
-	margin-bottom: 16px;
+	margin-bottom: 0;
 }
 
 .section h2 {
 	font-size: 16px;
 	font-weight: 600;
-	color: #2d3748;
-	margin-bottom: 16px;
+	margin-bottom: 12px;
+	color: #303943;
 }
 
-/* Radio Button Styles */
+/* Radio Group Styles */
 .radio-group {
 	display: flex;
 	flex-direction: column;
-	gap: 12px;
+	gap: 8px;
 }
 
 .radio-option {
 	display: flex;
 	align-items: flex-start;
 	gap: 12px;
-	cursor: pointer;
 	padding: 12px;
+	border: 2px solid #ababac;
 	border-radius: 8px;
+	cursor: pointer;
 	transition: all 0.2s ease;
-	border: 2px solid transparent;
+	background: #f5f5f5;
 }
 
 .radio-option:hover {
-	background: #f7fafc;
-	border-color: #e2e8f0;
+	border-color: #db0f11;
+	background: rgba(219, 15, 17, 0.05);
 }
 
 .radio-option input[type="radio"] {
@@ -116,9 +115,9 @@ body {
 }
 
 .radio-custom {
-	width: 20px;
-	height: 20px;
-	border: 2px solid #cbd5e0;
+	width: 18px;
+	height: 18px;
+	border: 2px solid #ababac;
 	border-radius: 50%;
 	position: relative;
 	flex-shrink: 0;
@@ -127,8 +126,8 @@ body {
 }
 
 .radio-option input[type="radio"]:checked + .radio-custom {
-	border-color: #667eea;
-	background: #667eea;
+	border-color: #db0f11;
+	background: #db0f11;
 }
 
 .radio-option input[type="radio"]:checked + .radio-custom::after {
@@ -137,27 +136,45 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 8px;
-	height: 8px;
-	background: white;
+	width: 6px;
+	height: 6px;
+	background: #f5f5f5;
 	border-radius: 50%;
+}
+
+.option-content {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.option-title {
+	font-weight: 500;
+	font-size: 14px;
+	color: #303943;
+}
+
+.option-description {
+	font-size: 12px;
+	color: #867b7b;
 }
 
 /* Checkbox Styles */
 .checkbox-option {
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	gap: 12px;
-	cursor: pointer;
 	padding: 12px;
+	border: 2px solid #ababac;
 	border-radius: 8px;
+	cursor: pointer;
 	transition: all 0.2s ease;
-	border: 2px solid transparent;
+	background: #f5f5f5;
 }
 
 .checkbox-option:hover {
-	background: #f7fafc;
-	border-color: #e2e8f0;
+	border-color: #db0f11;
+	background: rgba(219, 15, 17, 0.05);
 }
 
 .checkbox-option input[type="checkbox"] {
@@ -165,19 +182,18 @@ body {
 }
 
 .checkbox-custom {
-	width: 20px;
-	height: 20px;
-	border: 2px solid #cbd5e0;
+	width: 18px;
+	height: 18px;
+	border: 2px solid #ababac;
 	border-radius: 4px;
 	position: relative;
 	flex-shrink: 0;
-	margin-top: 2px;
 	transition: all 0.2s ease;
 }
 
 .checkbox-option input[type="checkbox"]:checked + .checkbox-custom {
-	border-color: #667eea;
-	background: #667eea;
+	border-color: #db0f11;
+	background: #db0f11;
 }
 
 .checkbox-option input[type="checkbox"]:checked + .checkbox-custom::after {
@@ -186,90 +202,106 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	color: white;
+	color: #f5f5f5;
 	font-size: 12px;
 	font-weight: bold;
 }
 
-/* Option Content */
-.option-content {
-	flex: 1;
+.checkbox-text {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
 }
 
-.option-title {
-	display: block;
-	font-size: 14px;
+.checkbox-title {
 	font-weight: 500;
-	color: #2d3748;
-	margin-bottom: 2px;
+	font-size: 14px;
+	color: #303943;
 }
 
-.option-description {
-	display: block;
+.checkbox-description {
 	font-size: 12px;
-	color: #718096;
-	line-height: 1.4;
+	color: #867b7b;
 }
 
 /* Super Private Section */
 .super-private {
-	background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+	background: rgba(219, 15, 17, 0.05);
 	padding: 16px;
 	border-radius: 8px;
-	border: none;
+	border: 1px solid rgba(219, 15, 17, 0.2);
 }
 
 .super-private h2 {
-	color: #2d3748;
-	margin-bottom: 12px;
+	color: #db0f11;
 }
 
-.super-private .checkbox-option {
-	background: rgba(255, 255, 255, 0.7);
-	border-radius: 6px;
-	margin: 0;
+/* Button Styles */
+.button {
+	width: 100%;
+	padding: 12px 16px;
+	border: none;
+	border-radius: 8px;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	margin-top: 8px;
 }
 
-.super-private .checkbox-option:hover {
-	background: rgba(255, 255, 255, 0.9);
+.button-primary {
+	background: #db0f11;
+	color: #f5f5f5;
 }
 
-/* Status Indicator */
-.status {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	padding: 8px 12px;
-	background: #f0fff4;
-	border-radius: 6px;
-	border: 1px solid #9ae6b4;
+.button-primary:hover {
+	background: #b50d0f;
+	transform: translateY(-1px);
 }
 
+.button-secondary {
+	background: #ababac;
+	color: #f5f5f5;
+}
+
+.button-secondary:hover {
+	background: #867b7b;
+	transform: translateY(-1px);
+}
+
+/* Status Indicators */
 .status-indicator {
+	display: inline-block;
 	width: 8px;
 	height: 8px;
 	border-radius: 50%;
-	background: #48bb78;
+	margin-right: 6px;
 }
 
-.status-indicator.active {
-	animation: pulse 2s infinite;
+.status-active {
+	background: #db0f11;
 }
 
-.status-text {
+.status-inactive {
+	background: #ababac;
+}
+
+/* Utility Classes */
+.text-small {
 	font-size: 12px;
-	color: #2f855a;
+	color: #867b7b;
+}
+
+.text-muted {
+	color: #ababac;
+}
+
+.text-accent {
+	color: #db0f11;
 	font-weight: 500;
 }
 
-@keyframes pulse {
-	0% {
-		opacity: 1;
-	}
-	50% {
-		opacity: 0.5;
-	}
-	100% {
-		opacity: 1;
-	}
+/* Animation for smooth transitions */
+* {
+	transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
