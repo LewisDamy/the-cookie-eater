@@ -5,7 +5,7 @@
 	"manifest_version": 3,
 	"action": {
 		"default_popup": "popup/popup.html",
-		"default_icon": "images/hello_extensions.png"
+		"default_icon": "images/cookie-icon.png"
 	},
 	"permissions": ["storage", "tabs", "activeTab"]
 }
