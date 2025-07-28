@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "debug": true,
+    "strict": false,
+    "delay": 500
+  },
+  "dom": {
+    "remove": ["#popup", ".overlay"],
+    "hide": [".ads"],
+    "addClass": {
+      "#cookie-banner": "hidden"
+    },
+    "removeClass": {
+      "body": "locked"
+    },
+    "setAttributes": {
+      "#accept-btn": {
+        "disabled": true
+      }
+    },
+    "setProperties": {
+      "#accept-btn": {
+        "disabled": true
+      }
+    }
+  },
+  "style": {
+    "body": {
+      "overflow": "auto"
+    },
+    ".modal": {
+      "backgroundColor": "transparent"
+    }
+  },
+  "behavior": {
+    "disableScrollEvent": true
+  }
+}
