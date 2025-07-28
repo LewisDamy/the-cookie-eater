@@ -14,7 +14,7 @@ function getBaseDomainAsync(url) {
 
 getBaseDomainAsync(window.location.href).then((domain) => {
   // Future: Make HTTP Request to Github -> fetch all domain.json's
-  const configUrl = chrome.runtime.getURL(`../websites/${domain}.json`);
+  const configUrl = chrome.runtime.getURL(`../recipes/${domain}.json`);
 
   fetch(configUrl)
     .then(res => {

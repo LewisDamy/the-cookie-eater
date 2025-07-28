@@ -22,7 +22,7 @@
         "scripts/magicRemover.js"
       ],
       "css": [
-        "websites/glassdoor.css"
+        "recipes/glassdoor.css"
       ],
       "type": "module",
       "run_at": "document_idle"
