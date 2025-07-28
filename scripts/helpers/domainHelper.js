@@ -17,7 +17,7 @@
 export const loadCurrentDomain = async (format = "full") => {
   try {
     // Query the active tab
-    const [tab] = await chrome.tabs.query({active: true, currentWindow: true});
+    const tab = window.location.href;
 
     if (tab && tab.url) {
       const url = new URL(tab.url);
