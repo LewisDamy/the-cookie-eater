@@ -1,0 +1,8 @@
+body {
+    overflow: scroll !important;
+    position: absolute !important;
+}
+
+#HardsellOverlay {
+    display: none !important;
+}

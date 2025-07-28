@@ -21,6 +21,9 @@
       "js": [
         "scripts/magicRemover.js"
       ],
+      "css": [
+        "websites/glassdoor.css"
+      ],
       "type": "module",
       "run_at": "document_idle"
     }
