@@ -1,11 +1,43 @@
 {
-	"name": "The Cookie Eater",
-	"description": "Auto-dismiss cookie banners and declutter your browsing. The Cookie Eater handles cookie popups so you don't have to.",
-	"version": "1.0.0",
-	"manifest_version": 3,
-	"action": {
-		"default_popup": "popup/popup.html",
-		"default_icon": "images/cookie-icon.png"
-	},
-	"permissions": ["storage", "tabs", "activeTab"]
+  "name": "The Cookie Eater",
+  "description": "Auto-dismiss cookie banners and declutter your browsing. The Cookie Eater handles cookie popups so you don't have to.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "images/cookie-icon.png"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "scripts/magicRemover.js"
+      ],
+      "css": [
+        "recipes/glassdoor.css"
+      ],
+      "type": "module",
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "websites/*.json",
+        "scripts/*.js",
+        "scripts/helpers/*.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,15 @@
+{
+  "remove": [
+    "#ContentWallHardsell",
+    "#HardsellOverlay"
+  ],
+  "style": {
+    "body": {
+      "overflow": "scroll",
+      "position": "absolute"
+    }
+  },
+  "customScripts": {
+    "disableScrollEvent": true
+  }
+}
