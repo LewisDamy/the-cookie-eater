@@ -13,7 +13,7 @@ Every. Single. Time.
 We then decided to create "the cookie eater" your friendly, and efficient, 
 Chrome extension that would solve all of your cookie problems.
 
-## 🧩 Extendability 
+## 🧩 Extendability (Soon to come!)
 
 The core concept for `The Cooke Eater` is that we created it to be extendable.
 Inside the `/recepies` directory, you will find several `JSON` files that 
@@ -36,7 +36,7 @@ Our goal is that, with the help of your contribution and your `PR`,
 
 Magically remove annoying banners from **ANY** webpage.
 
-- Deep Cleaning of Cookies 🧼
+- Deep Cleaning of Cookies 🧼 (Soon to come!)
 
 This features focuses on a deep level of privacy by completely
 removing **EVERY** cookie from `XYZ` webpage from your browser.
