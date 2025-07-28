@@ -10,7 +10,8 @@
   "permissions": [
     "storage",
     "tabs",
-    "activeTab"
+    "activeTab",
+    "scripting"
   ],
   "content_scripts": [
     {
@@ -27,7 +28,9 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "websites/*.json"
+        "websites/*.json",
+        "scripts/*.js",
+        "scripts/helpers/*.js"
       ],
       "matches": [
         "<all_urls>"
