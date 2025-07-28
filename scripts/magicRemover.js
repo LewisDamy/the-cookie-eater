@@ -1,8 +1,8 @@
-import { loadCurrentDomain } from "./helpers/domain.js";
-
+import { loadCurrentDomain } from "./helpers/domainHelper.js";
 
 loadCurrentDomain("core").then((domain) => {
-  const configUrl = chrome.runtime.getURL(`../configs/${domain}.json`);
+  // Future: Make HTTP Request to Github -> fetch all domain.json's
+  const configUrl = chrome.runtime.getURL(`../websites/${domain}.json`);
 
   fetch(configUrl)
     .then(res => {
@@ -28,12 +28,7 @@ loadCurrentDomain("core").then((domain) => {
       // runBehaviourScripts(config.behavior);
 
       if (data.style) {
-        Object.entries(data.style).forEach(({selector, styles}) => {
-          const element = document.querySelector(selector);
-          if (element && styles) {
-            Object.assign(element.style, styles);
-          }
-        });
+        console.log("Apply style rules");
       }
     })
     .catch(err => {
