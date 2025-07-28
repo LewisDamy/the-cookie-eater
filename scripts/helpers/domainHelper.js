@@ -1,7 +1,6 @@
 /**
  * Loads the current active tab's domain name.
  *
- * @param {"core"|"full"} [mode="core"] - Determines what to return:
  *    - "core": returns the core domain part (e.g., "glassdoor" from "www.glassdoor.com").
  *    - "full": returns the full hostname (e.g., "www.glassdoor.com").
  *
@@ -13,6 +12,7 @@
  *
  * // Get full domain:
  * const fullDomain = await loadCurrentDomain("full");
+ * @param format
  */
 export const loadCurrentDomain = async (format = "full") => {
   try {
@@ -22,29 +22,18 @@ export const loadCurrentDomain = async (format = "full") => {
     if (tab && tab.url) {
       const url = new URL(tab.url);
       const domain = url.hostname;
-
-      // Display the domain
-      currentDomainElement.textContent = domain;
-
-      // Handle special cases
-      if (url.protocol === "chrome:" || url.protocol === "chrome-extension:") {
-        currentDomainElement.textContent = "Chrome internal page";
-      } else if (url.protocol === "file:") {
-        currentDomainElement.textContent = "Local file";
+      // Return formatted domain name
+      if (format === "core") {
+        const host = domain.replace(/^www\./, "");
+        const parts = host.split(".");
+        return parts.length >= 3 ? parts[parts.length - 3] : parts[0];
+      } else {
+        return domain;
       }
     } else {
-      currentDomainElement.textContent = "Unknown";
-    }
-    // Return formatted domain name
-    if (format === "core") {
-      const host = currentDomainElement.textContent.replace(/^www\./, "");
-      const parts = host.split(".");
-      return parts.length >= 3 ? parts[parts.length - 3] : parts[0];
-    } else {
-      return currentDomainElement.textContent;
+      return "Domain not found";
     }
   } catch (error) {
     console.error("Error getting current domain:", error);
-    currentDomainElement.textContent = "Error loading domain";
   }
 };
